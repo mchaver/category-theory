@@ -1,0 +1,129 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+\usepackage{amssymb}
+
+\parindent=0pt
+\parskip=\medskipamount
+
+\begin{document}
+
+{\centering Symbols
+ 
+}
+
+$\cong$ : congruent \\
+$\in$ : in \\
+$\sim$ : similar, equivalence relation \\
+$\subset$ : subset ($A \subset B$ read as A is a subset of B)\\
+$\subseteq$ : subset or equal \\
+$\varnothing$ : Empty Set \\
+$\mathbb{N} := \{0,1,2,3,4,...\}$ : Natural Numbers \\
+$\mathbb{Z} := \{...,-2,-1,0,1,2,...\}$ : Integers  \\ 
+$\mathbb{N}  \subseteq \mathbb{Z}$
+
+
+%$im(f) := \{y \in Y | \exists x \in X$ such that $f(x) = y  \}$ \\
+%$\circ$ : composition: $f : X \rightarrow Y$ and $g : Y \rightarrow Z$ codomain of f is the sam set as the domain of g, f and g are composable $f \circ g$ \\
+%$f: X \rightarrow Y$ : function X and Y are sets then function f from X to Y, that send element $x \in X$ to an element of Y, $f(x) \in Y$
+%Subset: $A \subseteq B$ A is a subset of B if every element of A is an element of B \\
+%domain X is domain of f \\
+%codomain Y is codomain of f \\
+%image: elements of Y that have at least one arrow point to them
+%preimage: 
+
+{\centering Definitions
+ 
+}
+
+\hangindent=1em
+\hangafter=1
+\textbf{Power Set}: the set of all subsets of S, including the empty set and S itself.\\
+
+\hangindent=1em
+\hangafter=1
+\textbf{HomSet}: $Hom_{Set}(X,Y)$  set of function $X \rightarrow Y $\\
+
+\hangindent=1em
+\hangafter=1
+\textbf{Function Equality}: $f,g: X \rightarrow Y$ iff every element $x \in X$ has $f(x) = g(x)$ \\
+
+\hangindent=1em
+\hangafter=1
+\textbf{Isomorphism}: given sets X and Y. $f: X \rightarrow Y$ is an isomorphism if there is a function $g: Y \rightarrow X$ such that $g \circ f = id_{X}$ and $f \circ g = id_{Y}$. \\
+
+\hangindent=1em
+\hangafter=1
+\textbf{Commutative Diagram}: a diagram of objects (vertices) and morphisms (arrows or edges) such that all directed paths in the diagram with the same start and end points lead to the same result by composition. Such a diagram is said to commute. \\
+
+\hangindent=1em
+\hangafter=1
+\textbf{Ologs}: type represented by a singular indefinite noun phrase (a man, a pair), aspect is a way of viewing  a thing (being a person, having a quality) \\
+
+\hangindent=1em
+\hangafter=1
+\textbf{Product}: $X \times Y$ is a set of ordered pairs $(x,y)$, $X \times Y = \{(x,y) | x \in X, y \in Y\}$. projection functions $\pi_{1}: X \times Y \rightarrow X$ and $\pi_{2}: X \times Y \rightarrow Y$. Think of $fst$ and $snd$ in Haskell. \\
+
+% hang info
+\hangindent=1em
+\hangafter=1
+\textbf{Coproduct}: $X \sqcup Y $  disjoin union of X and Y. Set for which an element is either an element of X or Y. If it is an element of both sets then both copies are included in the coproduce but the origin is noted in the inclusion map. \\
+
+\hangindent=1em
+\hangafter=1
+\textbf{Pullback}: $f: X \rightarrow Z$ and $g: Y \rightarrow Z$. Morphisms with a common codomain. Limit of the cospan $X \rightarrow Z \leftarrow Y$. $P = X \times_{Z} Y$ \\
+
+\hangindent=1em
+\hangafter=1
+\textbf{Equalizer}: suppose there are two arrows, f and g, from X to Y, and for every $x \in X$ you have $f(x) = g(x)$. The equalizer of f and g is a commutative diagram such that $Eq(f,g) := \{x \in X | f(x) = g(x)\}$. Equalizer is the set of all inputs x in X such that f(x) = g(x). There may be other inputs where the results of f and g are not equivalent. Some object P to X to Y. \\
+
+\hangindent=1em
+\hangafter=1
+\textbf{Equivalence Relations}: Equivalence relation on set X is a subset $ R \subseteq X \times X $ iff $(x,x) \in R$, $(x,y) \in R$ iff $(y,x) \in R$, $(x,y) \in R$ and $(y,z) \in R$ then $(x,z) \in R$. $x \sim_R y$ or $x \sim y$ means $(x,y) \in R$. \\
+
+\hangindent=1em
+\hangafter=1
+\textbf{Equivalence Class}: an equivalence class of $\sim$ isa a subset $A \subseteq X$ where $A \neq \varnothing$, if $x \in A$ and $x' \in A$ then $x \sim x'$ and $x \in A$ and $x \sim y$ then $y \in A$. \\ 
+
+\hangindent=1em
+\hangafter=1
+\textbf{Partition}: a partition of X consists of a set I, for every element $i \in I$ a subset $X_i \subseteq X$: every element $x \in X$ is in some part and no element can be found in two parts. \\
+
+\hangindent=1em
+\hangafter=1
+\textbf{Pushout}: given $f : W \rightarrow X$, $g : W \rightarrow Y$ and $X \sqcup_W Y := (X \sqcup W \sqcup Y)/ \sim$ where $\forall w \in W, w \sim f(w)$, then $w \sim g(w)$ then $Z = X \sqcup_W Y$. \\
+
+\hangindent=1em
+\hangafter=1
+\textbf{Coequalizer}: given two parallel arrows $f : X \rightarrow Y$ and $g: X \rightarrow Y$, $q: Y \rightarrow Coeq(f,q)$. The coequalizer of f and g is the quotient of Y by the equivalence relation generated by $\{(f(x),g(x)) | x \in X\} \subseteq Y \times Y$. \\
+
+\hangindent=1em
+\hangafter=1
+\textbf{Retractions}: Given $f: X \rightarrow Y$ and $g: Y \rightarrow X$  such that $g \circ f = id_x : X \rightarrow X$. The left inverse of a morphism. \\
+
+\hangindent=1em
+\hangafter=1
+\textbf{Factor Through}: composition of morphisms. Given three object A, B and C and the following maps $f: A \rightarrow C$, $g : A \rightarrow B$ and $h : B \rightarrow C$ where $f = h \circ g$, then $f$ "factors through" $B$, $g$ and $h$. \\
+
+\hangindent=1em
+\hangafter=1
+\textbf{Multiset}: a set in which elements can be assigned a number of times to be counted. E.g. the set of words in a document. \\
+
+\hangindent=1em
+\hangafter=1
+\textbf{Relative Set}: B is a set. A relative set over B is a pair $(E,\pi)$ where E is a set and $\pi : E \rightarrow B$. A mapping of relative sets over B is $f : (E,\pi) \rightarrow (E', \pi ')$. \\
+
+% Notes for Ch 2
+%\hangindent=2em
+%\hangafter=2
+%\textbf{Indexed Set}:
+
+%Limits: \\
+%Colimits: Coproducts, Pushouts, Coequalizers \\
+%Surjective, Injective, Bijective \\
+%Monomorphism, Epimorphism \\
+%Homomorphism, Isomorphism, Automorphism, Endomorphism \\
+
+\end{document}  
